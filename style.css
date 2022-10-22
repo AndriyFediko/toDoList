@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+}
+button, input{
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+a{text-decoration: none;}
+.wrap{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+.todoContainer{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    /* background-color: black; */
+}
+.todoList{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.todoContainer p{
+    font-size: 2em;
+}
+.todoTask{
+    background-color: rgb(221, 255, 244);
+    border: 2px solid rgb(56, 170, 134);
+    width: 80%;
+    height: 70px;
+    border-radius: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    transition: opacity 0.3s;
+}
+.todoListAddTast-box{
+    width: 80%;
+    height: 50px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(221, 255, 244);
+    cursor: pointer;
+    border: 2px solid #38aa86;
+}
+.todoListAddTast-box img{
+    width: 25px;
+    height: 25px;
+}
+.todoListContainer{
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.todo__block{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.checkBox{
+    width: 25px;
+    height: 25px;
+    border: 2px solid #38aa86;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: #38aa86;
+}
+.checkBox .active{
+    display: flex;
+}
+.todoTask span{
+    margin-left: 20px;
+    font-size: 1.1em;
+}
+.todoTask__title, .todoTask__control{
+    display: flex;
+    align-items: center;
+}
+.todoTask__control img{
+    width: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    opacity: 0.55;
+}
+.todoTaskTitleActive{
+    display: none;
+}
+.todoListAddTast-box input{
+    width: 93%;
+    height: 100%;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 0px 20px;
+    font-size: 1.2em;
+}
+.addTaskButton{
+    width: 7%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:800px){
+    body{
+        font-size: 0.9em;
+    }
+    .todoListAddTast-box{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .todoListAddTast-box input{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        border-radius: 0px;
+    }
+    .addTaskButton{
+        width: 100%;
+        height: 40px;
+    }
+    .todoTask{
+        height: 60px;
+    }
+    .todoListContainer{
+        margin-top: 30px;
+    }
+}
